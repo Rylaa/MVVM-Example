@@ -9,13 +9,13 @@
 import UIKit
 
 class MovieListViewController : UITableViewController {
-  
+    
     var viewModel: MovieListViewModel? {
         didSet {
             viewModel?.delegate = self
         }
     }
-      private var movieList: [MoviePresentation] = []
+    private var movieList: [MoviePresentation] = []
     let cellID = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,7 @@ class MovieListViewController : UITableViewController {
         cell.textLabel?.text = movieList[indexPath.row].title
         return cell
     }
-
 }
-
-
 extension MovieListViewController : MovieListViewModelDelegate {
     func handleViewModelOutput(_ output: MovieListViewModelOutput) {
         switch output {
@@ -45,13 +42,10 @@ extension MovieListViewController : MovieListViewModelDelegate {
             
         case.showMovieList(let movies):
             movieList = movies
-            print(movies[0].title)
-            print(movieList[0].title)
-            print("asdasdasdasdasdad")
             tableView.reloadData()
             
         }
     }
-
-
+    
+    
 }
