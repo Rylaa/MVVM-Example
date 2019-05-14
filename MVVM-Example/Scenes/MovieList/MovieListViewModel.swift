@@ -12,27 +12,26 @@ import Foundation
 final class MovieListViewModel : MovieListViewModelProtocol {
     
     
-    weak var delegate: MovieListViewModelDelegate? // Burada weak dediğimiz için Contractstaki Delegate protocülene class eklemiştik
-    // o classı silip test et
-    let service : topMovieService!
     
+    weak var delegate: MovieListViewModelDelegate?
+    var movieList : [Results] = []
+    let service : topMovieService!
     init(service: topMovieService) {
         self.service = service
     }
     
     func load( ) { // Load içerisinde  Servis çağırmamız gerekiyor
-        print("asdasdas")
         notify(.updateTitle("Movies"))
         notify(.setLoading(true))
         
         service.fetchTopMovieList { [weak self] (response) in
-            guard let strongSelf = self else { return }
-            strongSelf.notify(.setLoading(false))
+            guard let self = self else { return }
+            self.notify(.setLoading(false))
             switch response {
             case .success(let result):
-                let movies = result.feed.results
-                let presentations = movies.map({ MoviePresentation(movie: $0) })
-                strongSelf.notify(.showMovieList(presentations))
+                self.movieList = result.feed.results
+                let presentations = result.feed.results.map({ MoviePresentation(movie: $0) })
+                self.notify(.showMovieList(presentations))
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -40,12 +39,11 @@ final class MovieListViewModel : MovieListViewModelProtocol {
     }
     
     func selectMovie(at index: Int) {
-        // TODO: Implement..
-
+        let list = movieList[index]
+        let controller = MovieDetailViewModel(presentation: list)
+        delegate?.navigate(to: .detail(controller))
     }
-    
     private func notify(_ output: MovieListViewModelOutput) {
         delegate?.handleViewModelOutput(output)
-        
     }
 }

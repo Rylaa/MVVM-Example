@@ -19,6 +19,24 @@ protocol MovieListViewModelProtocol {
     func selectMovie(at index: Int)
 }
 
+enum MovieListViewModelOutput {
+    case updateTitle(String)
+    case setLoading(Bool)
+    case showMovieList([MoviePresentation])
+}
+// * Daha sonra bu MovieListViewModelOutput handle edecek bir fonksiyon yazıyoruz
+// * Class tanımladık çünkü daha sonra weak eklediğimizde tekrar gelip weak yazmamak için
+
+enum showMovie {
+    case detail(MovieDetailProtocol)
+}
+
+
+protocol MovieListViewModelDelegate: class {
+    func handleViewModelOutput(_ output: MovieListViewModelOutput)
+    func navigate(to route:  showMovie)
+}
+
 //enum MovieListViewModelOutput: Equatable {
 //
 //    // View Modelin Çıktılar
@@ -26,16 +44,14 @@ protocol MovieListViewModelProtocol {
 //    case setLoading(Bool)
 //    case showMovieList([MovieListPresentation]) // Ekranda gözükmesi gereken struct
 //}
-enum MovieListViewModelOutput: Equatable {
-    case updateTitle(String)
-    case setLoading(Bool)
-    case showMovieList([MoviePresentation])
-}
-// * Daha sonra bu MovieListViewModelOutput handle edecek bir fonksiyon yazıyoruz
-// * Class tanımladık çünkü daha sonra weak eklediğimizde tekrar gelip weak yazmamak için
-protocol MovieListViewModelDelegate: class {
-    func handleViewModelOutput(_ output: MovieListViewModelOutput)
-}
+//enum MovieListViewModelOutput: Equatable {
+//    case updateTitle(String)
+//    case setLoading(Bool)
+//    case showMovieList([MoviePresentation])
+//}
+
+
+
 
 
 

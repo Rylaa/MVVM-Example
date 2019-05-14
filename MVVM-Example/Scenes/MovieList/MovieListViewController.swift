@@ -31,8 +31,21 @@ class MovieListViewController : UITableViewController {
         cell.textLabel?.text = movieList[indexPath.row].title
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.selectMovie(at: indexPath.row)
+    }
 }
 extension MovieListViewController : MovieListViewModelDelegate {
+    
+    
+    func navigate(to route: showMovie) { // gelen protocol
+        switch route {
+        case .detail(let viewModel):
+        let controller = MovieDetailViewController()
+        controller.viewModel = viewModel
+        show(controller, sender: nil)
+        }
+    }
     func handleViewModelOutput(_ output: MovieListViewModelOutput) {
         switch output {
         case .updateTitle(let title):
