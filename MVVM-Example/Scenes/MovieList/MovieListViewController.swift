@@ -9,7 +9,7 @@
 import UIKit
 
 class MovieListViewController : UITableViewController {
-    
+    // Mark: - Properties
     var viewModel: MovieListViewModel? {
         didSet {
             viewModel?.delegate = self
@@ -17,12 +17,15 @@ class MovieListViewController : UITableViewController {
     }
     private var movieList: [MoviePresentation] = []
     let cellID = "cell"
+    
+    // MARK: - Init
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.load()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -35,15 +38,14 @@ class MovieListViewController : UITableViewController {
         viewModel?.selectMovie(at: indexPath.row)
     }
 }
+// MARK: - Handlers
 extension MovieListViewController : MovieListViewModelDelegate {
-    
-    
     func navigate(to route: showMovie) { // gelen protocol
         switch route {
         case .detail(let viewModel):
-        let controller = MovieDetailViewController()
-        controller.viewModel = viewModel
-        show(controller, sender: nil)
+            let controller = MovieDetailViewController()
+            controller.viewModel = viewModel
+            show(controller, sender: nil)
         }
     }
     func handleViewModelOutput(_ output: MovieListViewModelOutput) {
@@ -56,9 +58,6 @@ extension MovieListViewController : MovieListViewModelDelegate {
         case.showMovieList(let movies):
             movieList = movies
             tableView.reloadData()
-            
         }
     }
-    
-    
 }

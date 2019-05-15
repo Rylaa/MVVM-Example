@@ -14,9 +14,3 @@ struct MovieDetailPresentation  {
 }
 
 
-extension  MovieDetailPresentation {
-    init(movie: Results) {
-        self.name = movie.name
-        self.detail = movie.artistName
-    }
-}

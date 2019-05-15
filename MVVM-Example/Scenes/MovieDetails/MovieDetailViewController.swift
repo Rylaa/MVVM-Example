@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class MovieDetailViewController : UIViewController {
     
@@ -15,21 +16,27 @@ class MovieDetailViewController : UIViewController {
             viewModel?.delegate = self
         }
     }
+    var name = UILabel()
+    var artistName = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         viewModel?.load()
+        
+        view.addSubview(name)
+        view.addSubview(artistName)
+        
+        name.center(in: view)
+        artistName.topToBottom(of: name)
+        artistName.centerX(to: view)
+        
     }
-    
-    
 }
 
 
 extension MovieDetailViewController : MovieDetailDelegate {
     func showMovie(presentation movie: MovieDetailPresentation) {
-        print(movie.name)
-        print(movie.detail)
+       self.name.text = movie.name
+        self.artistName.text = movie.detail
     }
-    
-    
 }
