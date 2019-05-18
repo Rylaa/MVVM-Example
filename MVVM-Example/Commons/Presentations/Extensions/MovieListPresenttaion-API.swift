@@ -9,11 +9,10 @@
 
 
 extension MoviePresentation {
-    
     init(movie : Results) {
-        self.artistName = movie.artistName
+        
         self.name   = movie.name
-        self.title = movie.name
+        self.image  = movie.image
         self.detail = movie.artistName
         
     }

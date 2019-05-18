@@ -2,7 +2,7 @@
   "Mac" : [
     {
       "name" : "TinyConstraints",
-      "hash" : "2c2c229e163056380305b80464ef32169aad6dd38aad2f4dc33b4de567e04076",
+      "hash" : "fe7c61aa24667e15a7cfed017d72821d666c933ed02e92326288a46b40fe3d79",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ],
@@ -12,7 +12,7 @@
   "tvOS" : [
     {
       "name" : "TinyConstraints",
-      "hash" : "ce03378b21a93c44a9f936d2bac69db8dab48f7b4abf847ba21991b3fed186a3",
+      "hash" : "c2c03ecee972f847086b9c115cb1e44be1289df526d635ba8d60ff79892e0104",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ],
@@ -20,7 +20,7 @@
   "iOS" : [
     {
       "name" : "TinyConstraints",
-      "hash" : "a072ecf58d68dfa39e9cd4d7744e9bca93c8610e2767b9e11b1fa773adba9e6c",
+      "hash" : "fdc20136cdec44d88c6676c28983cb85e81af65b73407bf342afadea190aa39a",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]

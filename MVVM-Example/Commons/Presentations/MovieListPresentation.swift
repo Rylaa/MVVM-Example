@@ -9,12 +9,9 @@
 import Foundation
 
 struct MoviePresentation {
-    
-    let artistName : String
-    let name       : String
-    let title: String
-    let detail: String
-    
+    let name    : String
+    let detail  : String
+    let image   : URL
 }
 
 

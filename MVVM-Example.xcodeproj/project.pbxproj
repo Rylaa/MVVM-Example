@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD1A3FE422902789006C2417 /* MovieWithImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FE322902789006C2417 /* MovieWithImageViewController.swift */; };
+		DD1A3FE6229027B7006C2417 /* MovieWithImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FE5229027B7006C2417 /* MovieWithImageBuilder.swift */; };
+		DD1A3FE8229027EE006C2417 /* MovieWithImageContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FE7229027EE006C2417 /* MovieWithImageContracts.swift */; };
+		DD1A3FEA229027F9006C2417 /* MovieWithImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FE9229027F9006C2417 /* MovieWithImageViewModel.swift */; };
+		DD1A3FEC229028D3006C2417 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A3FEB229028D3006C2417 /* Kingfisher.framework */; };
+		DD1A3FEE2290293E006C2417 /* MovieWithImagePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FED2290293E006C2417 /* MovieWithImagePresentation.swift */; };
+		DD1A3FF022902953006C2417 /* MovieWithImagePresentation-API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FEF22902953006C2417 /* MovieWithImagePresentation-API.swift */; };
+		DD1A3FF222906225006C2417 /* MovieWithImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1A3FF122906225006C2417 /* MovieWithImageTableViewCell.swift */; };
 		DD5547B6228B65EB0088A7DB /* MovieDetailPresentation-API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5547B5228B65EB0088A7DB /* MovieDetailPresentation-API.swift */; };
 		DDBFBFC52284274200F30C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBFBFC42284274200F30C20 /* AppDelegate.swift */; };
 		DDBFBFCC2284274300F30C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDBFBFCB2284274300F30C20 /* Assets.xcassets */; };
@@ -33,6 +41,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD1A3FE322902789006C2417 /* MovieWithImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImageViewController.swift; sourceTree = "<group>"; };
+		DD1A3FE5229027B7006C2417 /* MovieWithImageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImageBuilder.swift; sourceTree = "<group>"; };
+		DD1A3FE7229027EE006C2417 /* MovieWithImageContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImageContracts.swift; sourceTree = "<group>"; };
+		DD1A3FE9229027F9006C2417 /* MovieWithImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImageViewModel.swift; sourceTree = "<group>"; };
+		DD1A3FEB229028D3006C2417 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		DD1A3FED2290293E006C2417 /* MovieWithImagePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImagePresentation.swift; sourceTree = "<group>"; };
+		DD1A3FEF22902953006C2417 /* MovieWithImagePresentation-API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieWithImagePresentation-API.swift"; sourceTree = "<group>"; };
+		DD1A3FF122906225006C2417 /* MovieWithImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWithImageTableViewCell.swift; sourceTree = "<group>"; };
 		DD5547B5228B65EB0088A7DB /* MovieDetailPresentation-API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieDetailPresentation-API.swift"; sourceTree = "<group>"; };
 		DDBFBFC12284274200F30C20 /* MVVM-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBFBFC42284274200F30C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1A3FEC229028D3006C2417 /* Kingfisher.framework in Frameworks */,
 				DDBFBFDD22842A1A00F30C20 /* TinyConstraints.framework in Frameworks */,
 				DDBFBFDB22842A0700F30C20 /* Alamofire.framework in Frameworks */,
 			);
@@ -73,6 +90,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD1A3FE222901BB4006C2417 /* MovieListWithImage */ = {
+			isa = PBXGroup;
+			children = (
+				DD1A3FE322902789006C2417 /* MovieWithImageViewController.swift */,
+				DD1A3FE5229027B7006C2417 /* MovieWithImageBuilder.swift */,
+				DD1A3FE7229027EE006C2417 /* MovieWithImageContracts.swift */,
+				DD1A3FE9229027F9006C2417 /* MovieWithImageViewModel.swift */,
+				DD1A3FF122906225006C2417 /* MovieWithImageTableViewCell.swift */,
+			);
+			path = MovieListWithImage;
+			sourceTree = "<group>";
+		};
 		DDBFBFB82284274200F30C20 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +147,9 @@
 		DDBFBFD72284275F00F30C20 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DDF97BE12285A26A0099B538 /* MovieDetails */,
 				DDBFBFED2284729000F30C20 /* MovieList */,
+				DDF97BE12285A26A0099B538 /* MovieDetails */,
+				DD1A3FE222901BB4006C2417 /* MovieListWithImage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 		DDBFBFD922842A0600F30C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD1A3FEB229028D3006C2417 /* Kingfisher.framework */,
 				DDBFBFDC22842A1A00F30C20 /* TinyConstraints.framework */,
 				DDBFBFDA22842A0700F30C20 /* Alamofire.framework */,
 			);
@@ -184,6 +215,7 @@
 				DDBFBFF4228475BB00F30C20 /* Extensions */,
 				DDBFBFF5228475DA00F30C20 /* MovieListPresentation.swift */,
 				DDF97BE82285AB3E0099B538 /* MovieDetailPresentation.swift */,
+				DD1A3FED2290293E006C2417 /* MovieWithImagePresentation.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -193,6 +225,7 @@
 			children = (
 				DDF97BDF22859A490099B538 /* MovieListPresenttaion-API.swift */,
 				DD5547B5228B65EB0088A7DB /* MovieDetailPresentation-API.swift */,
+				DD1A3FEF22902953006C2417 /* MovieWithImagePresentation-API.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +318,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -301,14 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1A3FF222906225006C2417 /* MovieWithImageTableViewCell.swift in Sources */,
 				DDF97BE72285AA230099B538 /* MovieDetailViewModel.swift in Sources */,
 				DDBFBFF6228475DA00F30C20 /* MovieListPresentation.swift in Sources */,
+				DD1A3FE8229027EE006C2417 /* MovieWithImageContracts.swift in Sources */,
+				DD1A3FF022902953006C2417 /* MovieWithImagePresentation-API.swift in Sources */,
 				DDF97BE52285A4740099B538 /* MovieDetailContracts.swift in Sources */,
 				DDBFBFEF228472A800F30C20 /* MovieListContracts.swift in Sources */,
 				DDBFBFFC2284A0C000F30C20 /* MovieListViewController.swift in Sources */,
 				DDBFBFE62284309900F30C20 /* Result.swift in Sources */,
 				DDBFBFE322842F4500F30C20 /* topMovieService.swift in Sources */,
 				DDF97BE92285AB3E0099B538 /* MovieDetailPresentation.swift in Sources */,
+				DD1A3FE6229027B7006C2417 /* MovieWithImageBuilder.swift in Sources */,
+				DD1A3FEA229027F9006C2417 /* MovieWithImageViewModel.swift in Sources */,
 				DDBFBFC52284274200F30C20 /* AppDelegate.swift in Sources */,
 				DDED1360228B018200CEA7EA /* MovieDetailBuilder.swift in Sources */,
 				DDBFBFEC22846FF700F30C20 /* AppRouter.swift in Sources */,
@@ -318,7 +357,9 @@
 				DDBFBFE8228432D300F30C20 /* Error.swift in Sources */,
 				DDBFBFE122842BB000F30C20 /* movieAPI.swift in Sources */,
 				DD5547B6228B65EB0088A7DB /* MovieDetailPresentation-API.swift in Sources */,
+				DD1A3FEE2290293E006C2417 /* MovieWithImagePresentation.swift in Sources */,
 				DDED1364228B01C000CEA7EA /* MovieDetailViewController.swift in Sources */,
+				DD1A3FE422902789006C2417 /* MovieWithImageViewController.swift in Sources */,
 				DDBFBFEA22846FE800F30C20 /* AppContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

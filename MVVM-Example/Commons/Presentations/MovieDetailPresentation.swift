@@ -9,8 +9,9 @@
 import Foundation
 
 struct MovieDetailPresentation  {
-    let name : String
-    let detail : String
+    let name    : String
+    let detail  : String
+    let image   : URL
 }
 
 

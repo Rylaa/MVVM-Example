@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" "5.0.0-beta.5"
 github "roberthein/TinyConstraints"
+github "onevcat/Kingfisher" ~> 5.0

@@ -17,6 +17,7 @@ protocol MovieListViewModelProtocol {
     var delegate: MovieListViewModelDelegate? { get set }
     func load()
     func selectMovie(at index: Int)
+    func showImageMovie()
 }
 
 enum MovieListViewModelOutput {
@@ -29,6 +30,7 @@ enum MovieListViewModelOutput {
 
 enum showMovie {
     case detail(MovieDetailProtocol)
+    case showImageDetail(MovieWithImageProtocol)
 }
 
 
