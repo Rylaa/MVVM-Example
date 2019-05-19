@@ -24,7 +24,6 @@ class MovieWithImageViewController : UITableViewController {
         viewModel.load()
         tableView.register(MovieWithImageTableViewCell.self, forCellReuseIdentifier: cellID)
     }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
